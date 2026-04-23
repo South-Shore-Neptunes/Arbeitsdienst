@@ -128,6 +128,7 @@
         <string name="PLG_ARBEITSDIENST_NO_DATA">keine Daten vorhanden</string>
         <string name="PLG_ARBEITSDIENST_OVERVIEW">Zahlungsübersicht</string>
         <string name="PLG_ARBEITSDIENST_OVERVIEW_PAYMENT">aktuelle Zahlungen</string>
+        <string name="PLG_ARBEITSDIENST_OVERVIEW_PAYMENT_NO_DATA">es sind keine Daten vorhanden</string>
         <string name="PLG_ARBEITSDIENST_OVERVIEW_HISTORY">Zahlungshistorie</string>
 
         <string name="PLG_Arbeitsdienst_PLUGIN_INFORMATION">Plugininformationen</string>

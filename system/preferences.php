@@ -25,6 +25,14 @@ try {
     require_once (__DIR__ . '/../classes/configtable.php');
     require_once(__DIR__ . '/../../../system/login_valid.php');
 
+    // Ensure this plugin language path is available for this standalone preferences route.
+    // This avoids unresolved #PLG_*# keys when plugin language auto-discovery misses the folder.
+    try {
+        $gL10n->addLanguageFolderPath(__DIR__ . '/../languages');
+    } catch (Throwable $e) {
+        // Ignore duplicate/invalid path errors and continue with default language handling.
+    }
+
     // only authorized user are allowed to start this module
         if (!$gCurrentUser->isAdministrator()) {
             throw new Exception('SYS_NO_RIGHTS');
