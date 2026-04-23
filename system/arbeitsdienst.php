@@ -46,7 +46,6 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 // error_reporting(E_ALL);
 require_once (__DIR__ . '/../../../system/common.php');
 require_once (__DIR__ . '/../../../system/login_valid.php');
-require_once (__DIR__ . '/../../../system/classes/HtmlForm.php');
 require_once (__DIR__ . '/common_function.php');
 require_once (__DIR__ . '/../classes/configtable.php');
 
@@ -210,7 +209,7 @@ if ($gCurrentUser->isAdministratorUsers())
                                         $gL10n->get('PLG_ARBEITSDIENST_MISSING') . ': ' . $sumworking['Fehlstunden']);
 
         $formStaticDisplay->addDescription('plg_arbeitsdienst_topay',
-                                        $gL10n->get('PLG_ARBEITSDIENST_TOPAY') . ': ' . $sumworking['Kosten'] . '€');
+                                        $gL10n->get('PLG_ARBEITSDIENST_TOPAY') . ': ' . $sumworking['Kosten'] . $gSettingsManager->getString('system_currency'));
         
         $formStaticDisplay->addToHtmlPage();
     }
@@ -370,7 +369,7 @@ if ($getshowOption == 'main')
                                     $gL10n->get('PLG_ARBEITSDIENST_INPUT_USER'),
                                                         $gDb, 
                                                         $sqlDataUser, 
-                                                        array( 'property' => HtmlForm::FIELD_REQUIRED,
+                                                        array( 'property' => FormPresenter::FIELD_REQUIRED,
                                                                         'helpTextIdLabel' => 'PLG_ARBEITSDIENST_CHOOSE_USERSELECTION_DESC',
                                                                         'showContextDependentFirstEntry' => false,
                                                                         'firstEntry' => ' Bitte wählen ',
@@ -596,7 +595,7 @@ if ($getshowOption == 'main')
         $workingtopay = $membersworkinfo[$getinputuser]['Fehlstunden'] * $pPreferences->config['Stunden']['Kosten'];
     }
     $workingtopay = number_format($workingtopay, 2);
-    $workingtopay = $workingtopay . ' €';
+    $workingtopay = $workingtopay . ' ' . $gSettingsManager->getString('system_currency');
 
     //Tabellenkopf
     $smarty->assign('header_result_age', 
@@ -613,6 +612,8 @@ if ($getshowOption == 'main')
                     $gL10n->get('PLG_ARBEITSDIENST_INPUT_RESULT_MISSING'));
     $smarty->assign('header_result_topay',                                                
                     $gL10n->get('PLG_ARBEITSDIENST_INPUT_RESULT_TOPAY'));
+    $smarty->assign('header_result_no_data',
+                     $gL10n->get('PLG_ARBEITSDIENST_NO_DATA'));
 
     //Ergebnisse ausgeben
     if ($getinputuser != 0)
@@ -671,7 +672,7 @@ if ($getshowOption == 'main')
                                         '',
                                         $gDb, 
                                         $sqlcat,
-                                        array('firstEntry' => '-- vorhandene Kategorien --'));
+                                        array('firstEntry' => $gL10n->get('PLG_ARBEITSDIENST_INPUT_CAT_EXISTING')));
                                                                                     
         $formInputCat->addSubmitButton('btn_input_save', $gL10n->get('PLG_ARBEITSDIENST_INPUT_SAVE'), array('icon' => 'fa-save',
                                                                                                                     'class' => ' offset-sm-3'));
@@ -709,7 +710,7 @@ if ($getshowOption == 'main')
                                         '',
                                         $gDb, 
                                         $sqlbuild,
-                                        array('firstEntry' => '-- vorhandene Bauvorhaben --'));
+                                        array('firstEntry' => $gL10n->get('PLG_ARBEITSDIENST_INPUT_BUILD_EXISTING')));
                                                                                     
         $formInputbuild->addSubmitButton('btn_input_save', $gL10n->get('PLG_ARBEITSDIENST_INPUT_SAVE'), array('icon' => 'fa-save',
                                                                                                                     'class' => ' offset-sm-3'));

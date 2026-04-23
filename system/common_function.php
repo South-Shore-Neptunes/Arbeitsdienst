@@ -12,7 +12,7 @@
  ***********************************************************************************************
  */
 
- use Admidio\Components\Entity\Component;
+use Admidio\Components\Entity\Component;
 use Admidio\Infrastructure\Database;
 use Admidio\Infrastructure\Utils\SecurityUtils;
 use Admidio\Infrastructure\Utils\StringUtils;
@@ -67,18 +67,24 @@ if (! defined('ORG_ID')) {
 function isUserAuthorized( string $scriptname = '')
 {
     global $gDb, $gCurrentUser;
-    
+
+    // Administrators always have access to the plugin
+    if ($gCurrentUser->isAdministrator())
+    {
+        return true;
+    }
+
     $userIsAuthorized = false;
     $menIds = array();
-    
+
     $menuItemURL = FOLDER_PLUGINS. PLUGIN_FOLDER. '/'. ((strlen($scriptname) === 0) ? 'index.php' : $scriptname);
-    
+
     $sql = 'SELECT men_id
               FROM '.TBL_MENU.'
              WHERE men_url = ? -- $menuItemURL';
-    
+
     $menuStatement = $gDb->queryPrepared($sql, array($menuItemURL));
-    
+
     if ( $menuStatement->rowCount() !== 0 )
     {
         while ($row = $menuStatement->fetch())

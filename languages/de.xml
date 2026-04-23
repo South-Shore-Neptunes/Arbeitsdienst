@@ -91,8 +91,10 @@
 	<string name="PLG_ARBEITSDIENST_INPUT_AGE_BEGIN">Beginn Arbeitsdienstpflicht: </string>
 	<string name="PLG_ARBEITSDIENST_INPUT_AGE_END">Ende Arbeitsdienstpflicht: </string>
 	<string name="PLG_ARBEITSDIENST_INPUT_BUILD">Bauvorhaben</string>
+	<string name="PLG_ARBEITSDIENST_INPUT_BUILD_EXISTING">-- vorhandene Bauvorhaben --</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_BUILD_NEW">neue Bauvorhaben anlegen</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_CAT">Kategorien</string>
+	<string name="PLG_ARBEITSDIENST_INPUT_CAT_EXISTING">-- vorhandene Kategorien --</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_CAT_NEW">neue Kategorie anlegen</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_CHANGE">Ändern</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_DATEACCOUNTING">Datum: </string>
@@ -116,12 +118,12 @@
 	<string name="PLG_ARBEITSDIENST_INPUT_WORK">Eingabe Arbeitsdienst</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_WORKINGDATE">Datum</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_WORKINGHOURS_WOMAN">Arbeitsstunden Frauen: </string>
-	<string name="PLG_ARBEITSDIENST_INPUT_WORKINGHOURS_AMOUNT">Betrag in €: </string>
+	<string name="PLG_ARBEITSDIENST_INPUT_WORKINGHOURS_AMOUNT">Betrag in</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_YEAR">Abrechnungsjahr</string>
 
 	<string name="PLG_ARBEITSDIENST_MANAGEMENT">Arbeitsdienst</string>
 	<string name="PLG_ARBEITSDIENST_MISSING">Fehlstunden</string>
-
+	<string name="PLG_ARBEITSDIENST_NO_DATA">keine Daten vorhanden</string>
 	<string name="PLG_ARBEITSDIENST_OVERVIEW">Zahlungsübersicht</string>
 	<string name="PLG_ARBEITSDIENST_OVERVIEW_PAYMENT">aktuelle Zahlungen</string>
 	<string name="PLG_ARBEITSDIENST_OVERVIEW_HISTORY">Zahlungshistorie</string>

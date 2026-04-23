@@ -11,8 +11,7 @@
 	<string name="PLG_ARBEITSDIENST_CAT">Category</string>
 	<string name="PLG_ARBEITSDIENST_CHOOSE_CATSELECTION_DESC">For statistical reasons, tasks should be assigned to
 		categories.</string>
-	<string name="PLG_ARBEITSDIENST_CHOOSE_PROJECTSELECTION_DESC">If tasks are carried out for specific construction
-		projects, select them here.</string>
+	<string name="PLG_ARBEITSDIENST_CHOOSE_PROJECTSELECTION_DESC">If tasks are carried out for specific projects, select them here.</string>
 	<string name="PLG_ARBEITSDIENST_CHOOSE_USERSELECTION_DESC">Here you can select the member for whom
 		the data should be entered</string>
 	<string name="PLG_ARBEITSDIENST_CONTRIBUTION_PAYMENTS">Work Duty Payments</string>
@@ -89,9 +88,11 @@
 
 	<string name="PLG_ARBEITSDIENST_INPUT_AGE_BEGIN">Start of work duty obligation: </string>
 	<string name="PLG_ARBEITSDIENST_INPUT_AGE_END">End of work duty obligation: </string>
-	<string name="PLG_ARBEITSDIENST_INPUT_BUILD">Construction projects</string>
-	<string name="PLG_ARBEITSDIENST_INPUT_BUILD_NEW">Create new construction project</string>
+	<string name="PLG_ARBEITSDIENST_INPUT_BUILD">Projects</string>
+	<string name="PLG_ARBEITSDIENST_INPUT_BUILD_EXISTING">-- Existing projects --</string>
+	<string name="PLG_ARBEITSDIENST_INPUT_BUILD_NEW">Create new project</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_CAT">Categories</string>
+  <string name="PLG_ARBEITSDIENST_INPUT_CAT_EXISTING">-- Exisiting categories --</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_CAT_NEW">Create new category</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_CHANGE">Change</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_DATEACCOUNTING">Date: </string>
@@ -101,7 +102,7 @@
 
 	<string name="PLG_ARBEITSDIENST_INPUT_HOURS">hours worked</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_HOURS_TABLE">Time</string>
-	<string name="PLG_ARBEITSDIENST_INPUT_PROJECT">Construction project</string>
+	<string name="PLG_ARBEITSDIENST_INPUT_PROJECT">Project</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_RESULT_ACTUAL">Actual</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_RESULT_AGE">Age</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_RESULT_DIFF">Diff</string>
@@ -109,18 +110,18 @@
 	<string name="PLG_ARBEITSDIENST_INPUT_RESULT_MISSING">Missing</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_RESULT_PASSIV">Passive/Exempt</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_RESULT_TARGET">Target</string>
-	<string name="PLG_ARBEITSDIENST_INPUT_RESULT_TOPAY">to pay</string>
+	<string name="PLG_ARBEITSDIENST_INPUT_RESULT_TOPAY">To pay</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_SAVE">Save</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_USER">Member name</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_WORK">Work Duty Entry</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_WORKINGDATE">Date</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_WORKINGHOURS_WOMAN">Working hours women: </string>
-	<string name="PLG_ARBEITSDIENST_INPUT_WORKINGHOURS_AMOUNT">Amount in €: </string>
+	<string name="PLG_ARBEITSDIENST_INPUT_WORKINGHOURS_AMOUNT">Amount in</string>
 	<string name="PLG_ARBEITSDIENST_INPUT_YEAR">Billing year</string>
 
 	<string name="PLG_ARBEITSDIENST_MANAGEMENT">Work Duty</string>
 	<string name="PLG_ARBEITSDIENST_MISSING">Missing hours</string>
-
+	<string name="PLG_ARBEITSDIENST_NO_DATA">No data available</string>
 	<string name="PLG_ARBEITSDIENST_OVERVIEW">Payment overview</string>
 	<string name="PLG_ARBEITSDIENST_OVERVIEW_PAYMENT">current payments</string>
 	<string name="PLG_ARBEITSDIENST_OVERVIEW_HISTORY">Payment history</string>

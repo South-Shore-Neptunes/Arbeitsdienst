@@ -120,7 +120,7 @@ try {
                                                 'step' => 1 ));
            
     $formConfigurations->addInput('workinghoursamount', 
-                                $gL10n->get('PLG_ARBEITSDIENST_INPUT_WORKINGHOURS_AMOUNT'), 
+                                $gL10n->get('PLG_ARBEITSDIENST_INPUT_WORKINGHOURS_AMOUNT') . ' ' . $gSettingsManager->getString('system_currency') . ': ', 
                                 $pPreferences->config['Stunden']['Kosten'], 
                                 array('type' => 'number',
                                                         'minNumber' => 0,
