@@ -12,7 +12,7 @@
         <tbody>
         {if count($rows) eq 0}
             <tr>
-                <td colspan="{count($headers)}" style="text-align: center;">{$l10n->get('PLG_ARBEITSDIENST_OVERVIEW_PAYMENT_NO_DATA')}</td>
+                <td colspan="{count($headers)}" style="text-align: center;">{$no_data_text}</td>
             </tr>
         {else}
         {foreach $rows as $key => $row}

@@ -65,6 +65,17 @@ try {
 
     $gNavigation->addUrl(CURRENT_URL, $gL10n->get('SYS_CONFIGURATIONS'));
 
+    // Backward compatibility: older installs stored a fixed German default.
+    $localizedWorkDuty = $gL10n->get('PLG_ARBEITSDIENST_HEADLINE');
+    $defaultFilename = $pPreferences->config['SEPA']['dateiname'];
+    $defaultReference = $pPreferences->config['SEPA']['reference'];
+    if ($defaultFilename === 'Arbeitsdienst') {
+        $defaultFilename = $localizedWorkDuty;
+    }
+    if ($defaultReference === 'Arbeitsdienst') {
+        $defaultReference = $localizedWorkDuty;
+    }
+
     // create html page object
     $page = PagePresenter::withHtmlIDAndHeadline('plg-arbeitsdienst-preferences', $headline);
     //$page->addCssFile(ADMIDIO_URL . FOLDER_PLUGINS . PLUGIN_FOLDER . '/css/arbeitsdienst.css');
@@ -161,7 +172,7 @@ try {
 
     $formConfigurations->addInput('filename', 
                                  $gL10n->get('PLG_ARBEITSDIENST_INPUT_FILENAME'), 
-                                 $pPreferences->config['SEPA']['dateiname'], 
+                                 $defaultFilename, 
                                  array('type' => 'text'));
 
 //#############################################################################
@@ -170,7 +181,7 @@ try {
 
     $formConfigurations->addInput('reference', 
                                   $gL10n->get('PLG_ARBEITSDIENST_INPUT_REFERENCE'), 
-                                  $pPreferences->config['SEPA']['reference'], 
+                                  $defaultReference, 
                                   array('type' => 'text'));
 
 //#############################################################################

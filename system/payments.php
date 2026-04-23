@@ -420,6 +420,7 @@ try
         $smarty->assign('columnAlign', $ColumnAlign);
         $smarty->assign('headers', $ColumnValuesHeader);
         $smarty->assign('rows', $columnValues);
+        $smarty->assign('no_data_text', $gL10n->get('PLG_ARBEITSDIENST_OVERVIEW_PAYMENT_NO_DATA'));
 
         //Template einbinden
         $htmlTable = $smarty->fetch(__DIR__ . '/../templates/arbeitsdienst_overview_payment.tpl');

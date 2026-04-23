@@ -124,8 +124,8 @@
         <string name="PLG_ARBEITSDIENST_MANAGEMENT">Work Duty</string>
         <string name="PLG_ARBEITSDIENST_MISSING">Missing hours</string>
         <string name="PLG_ARBEITSDIENST_NO_DATA">No data available</string>
-        <string name="PLG_ARBEITSDIENST_OVERVIEW">Payment overview</string>
-        <string name="PLG_ARBEITSDIENST_OVERVIEW_PAYMENT">current payments</string>
+        <string name="PLG_ARBEITSDIENST_OVERVIEW">Payment Overview</string>
+        <string name="PLG_ARBEITSDIENST_OVERVIEW_PAYMENT">Current Payments</string>
         <string name="PLG_ARBEITSDIENST_OVERVIEW_PAYMENT_NO_DATA">No data available</string>
         <string name="PLG_ARBEITSDIENST_OVERVIEW_HISTORY">Payment history</string>
         
