@@ -178,6 +178,19 @@ $members = list_members($datefilteractual,
 $membersworkinfo = list_members_workinfo($members, 
                                          $datefilteractual);
 
+// Use a valid fallback user id if the current one is not part of the filtered member list.
+if (!empty($members) && !isset($members[$getUserId]))
+{
+    $memberIds = array_keys($members);
+    $getUserId = (int) reset($memberIds);
+}
+
+// Keep admin selection 0 ("Bitte waehlen"), but guard all other invalid ids.
+if ((int) $getinputuser !== 0 && !isset($members[$getinputuser]))
+{
+    $getinputuser = $getUserId;
+}
+
 // Information der Gesamtstunden
 $sumworking = sum_working($membersworkinfo, 
                           $pPreferences->config['Stunden']['Kosten']);
@@ -361,7 +374,7 @@ if ($getshowOption == 'main')
                                     $calculationdate,
                                     $calculationdate);
 
-    $tempname = $members[$getUserId]['LAST_NAME'] . ', ' . $members[$getUserId]['FIRST_NAME'];
+    $tempname = trim((string) ($members[$getUserId]['LAST_NAME'] ?? '') . ', ' . (string) ($members[$getUserId]['FIRST_NAME'] ?? ''), ', ');
     //$getinputuser = $getUserId;    
     if ($gCurrentUser->isAdministrator()) 
     {
@@ -379,7 +392,7 @@ if ($getshowOption == 'main')
     }
     else 
     {
-        $tempname = $members[$getUserId]['LAST_NAME'] . ', ' . $members[$getUserId]['FIRST_NAME'];
+        $tempname = trim((string) ($members[$getUserId]['LAST_NAME'] ?? '') . ', ' . (string) ($members[$getUserId]['FIRST_NAME'] ?? ''), ', ');
         $getinputuser = $getUserId;
         $form->addSelectBox('plg_arbeitsdienst_input_user', 
                             $gL10n->get('PLG_ARBEITSDIENST_INPUT_USER'), 
@@ -590,7 +603,7 @@ if ($getshowOption == 'main')
 
     // zu zahlenden Betrag errechnen
     $workingtopay = 0;
-    if ($getinputuser != 0)
+    if ($getinputuser != 0 && isset($membersworkinfo[$getinputuser]))
     {
         $workingtopay = $membersworkinfo[$getinputuser]['Fehlstunden'] * $pPreferences->config['Stunden']['Kosten'];
     }
@@ -616,7 +629,7 @@ if ($getshowOption == 'main')
                      $gL10n->get('PLG_ARBEITSDIENST_NO_DATA'));
 
     //Ergebnisse ausgeben
-    if ($getinputuser != 0)
+    if ($getinputuser != 0 && isset($membersworkinfo[$getinputuser]))
     {
         
         $smarty->assign('overview_result_alter', $membersworkinfo[$getinputuser]['ALTER']);
