@@ -16,11 +16,11 @@
 	<string name="PLG_ARBEITSDIENST_CHOOSE_USERSELECTION_DESC">Hier kann das Mitglied ausgewählt werden, für das
 		die Daten eingegeben werden sollen</string>
 	<string name="PLG_ARBEITSDIENST_CONTRIBUTION_PAYMENTS">Arbeitsdienstzahlungen</string>
-	<string name="PLG_ARBEITSDIENST_CONTRIBUTION_PAYMENTS_DESC">Hier kann nach erfolgter Zahlung ein Bezahlt-Datum in die Datenbank geschrieben werden.</string>string>
-	<string name="PLG_ARBEITSDIENST_CONTRIBUTION_HISTORY">Zahlungshistorie Arbeitsdienst</string>string>
-	<string name="PLG_ARBEITSDIENST_CONTRIBUTION_HISTORY_EDIT">Zahlungshistorie anzeigen</string>string>	
+	<string name="PLG_ARBEITSDIENST_CONTRIBUTION_PAYMENTS_DESC">Hier kann nach erfolgter Zahlung ein Bezahlt-Datum in die Datenbank geschrieben werden.</string>
+	<string name="PLG_ARBEITSDIENST_CONTRIBUTION_HISTORY">Zahlungshistorie Arbeitsdienst</string>
+	<string name="PLG_ARBEITSDIENST_CONTRIBUTION_HISTORY_EDIT">Zahlungshistorie anzeigen</string>
 	<string name="PLG_ARBEITSDIENST_CONTRIBUTION_HISTORY_DESC">Hier kann eine Historie der Zahlungen angezeigt werden. 
-		Als Grundlage dient ein gesetztes Bezahlt-Datum und die zu diesem Zeitpunkt vorhandenen Einträge von Zahlungen, Verwendungszweck und Fälligkeitsdatum.</string>string>
+		Als Grundlage dient ein gesetztes Bezahlt-Datum und die zu diesem Zeitpunkt vorhandenen Einträge von Zahlungen, Verwendungszweck und Fälligkeitsdatum.</string>
 
 	<string name="PLG_ARBEITSDIENST_DATA_AGE_BEGIN_INFO">Eingabe des Alters, ab dem Arbeitsdienst geleistet
 		werden muss.</string>
