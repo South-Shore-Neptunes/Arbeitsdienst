@@ -66,6 +66,8 @@
         <string name="PLG_ARBEITSDIENST_EXPORT_KONTROL_PRINT_CSVPAY">CSV(payers)</string>
         <string name="PLG_ARBEITSDIENST_EXPORT_KONTROL_SEPA_RCUR">RCUR</string>
         <string name="PLG_ARBEITSDIENST_EXPORT_KONTROL_SEPA_FRST">FRST</string>
+        <string name="PLG_ARBEITSDIENST_EXPORT_FILENAME_ALL_PREFIX">WorkDuty_All</string>
+        <string name="PLG_ARBEITSDIENST_EXPORT_FILENAME_PAY_ONLY_PREFIX">WorkDuty_Payers</string>
 
         <string name="PLG_ARBEITSDIENST_FILENAME">File name</string>
         <string name="PLG_ARBEITSDIENST_FILTER">Filter</string>
@@ -93,7 +95,7 @@
         <string name="PLG_ARBEITSDIENST_INPUT_BUILD_EXISTING">-- Existing projects --</string>
         <string name="PLG_ARBEITSDIENST_INPUT_BUILD_NEW">Create new project</string>
         <string name="PLG_ARBEITSDIENST_INPUT_CAT">Categories</string>
-  <string name="PLG_ARBEITSDIENST_INPUT_CAT_EXISTING">-- Exisiting categories --</string>
+        <string name="PLG_ARBEITSDIENST_INPUT_CAT_EXISTING">-- Exisiting categories --</string>
         <string name="PLG_ARBEITSDIENST_INPUT_CAT_NEW">Create new category</string>
         <string name="PLG_ARBEITSDIENST_INPUT_CHANGE">Change</string>
         <string name="PLG_ARBEITSDIENST_INPUT_DATEACCOUNTING">Date: </string>

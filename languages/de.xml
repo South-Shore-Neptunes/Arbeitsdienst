@@ -68,6 +68,8 @@
         <string name="PLG_ARBEITSDIENST_EXPORT_KONTROL_PRINT_CSVPAY">CSV(Zahler)</string>
         <string name="PLG_ARBEITSDIENST_EXPORT_KONTROL_SEPA_RCUR">RCUR</string>
         <string name="PLG_ARBEITSDIENST_EXPORT_KONTROL_SEPA_FRST">FRST</string>
+        <string name="PLG_ARBEITSDIENST_EXPORT_FILENAME_ALL_PREFIX">Arbeitsdienst_Alle</string>
+        <string name="PLG_ARBEITSDIENST_EXPORT_FILENAME_PAY_ONLY_PREFIX">Arbeitsdienst_Zahler</string>
 
         <string name="PLG_ARBEITSDIENST_FILENAME">Dateiname</string>
         <string name="PLG_ARBEITSDIENST_FILTER">Filter</string>
