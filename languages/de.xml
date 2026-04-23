@@ -32,6 +32,7 @@
         <string name="PLG_ARBEITSDIENST_DATE_PAID">Bezahlt-Datum</string>
         <string name="PLG_ARBEITSDIENST_DATE_PAID_DESC">Das Bezahlt-Datum wird bei einem Benutzer als
                 Kennzeichnung für eine geleistete Beitragszahlung eingetragen.</string>
+        <string name="PLG_ARBEITSDIENST_DATE_PAID_CHANGE_ALL_DESC">Alle Einträge für die Datumszuweisung auswählen oder abwählen.</string>
 
         <string name="PLG_ARBEITSDIENST_EDIT_LIST">Eintrag bearbeiten</string>
         <string name="PLG_ARBEITSDIENST_EXCEPTION">Passive Rolle</string>
@@ -113,6 +114,7 @@
         <string name="PLG_ARBEITSDIENST_INPUT_RESULT_PASSIV">Passiv/Befreit</string>
         <string name="PLG_ARBEITSDIENST_INPUT_RESULT_TARGET">Soll</string>
         <string name="PLG_ARBEITSDIENST_INPUT_RESULT_TOPAY">zu zahlen</string>
+        <string name="PLG_ARBEITSDIENST_INPUT_ROLE_SELECTION">--- Rolle wählen ---</string>
         <string name="PLG_ARBEITSDIENST_INPUT_SAVE">Speichern</string>
         <string name="PLG_ARBEITSDIENST_INPUT_USER">Mitgliedsname</string>
         <string name="PLG_ARBEITSDIENST_INPUT_WORK">Eingabe Arbeitsdienst</string>

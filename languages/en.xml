@@ -31,6 +31,7 @@
         <string name="PLG_ARBEITSDIENST_DATE_PAID">Paid date</string>
         <string name="PLG_ARBEITSDIENST_DATE_PAID_DESC">The paid date is entered for a user as
                 a marker for a completed contribution payment.</string>
+        <string name="PLG_ARBEITSDIENST_DATE_PAID_CHANGE_ALL_DESC">Select or deselect all entries for date assignment.</string>
 
         <string name="PLG_ARBEITSDIENST_EDIT_LIST">Edit entry</string>
         <string name="PLG_ARBEITSDIENST_EXCEPTION">Passive role</string>
@@ -111,6 +112,7 @@
         <string name="PLG_ARBEITSDIENST_INPUT_RESULT_PASSIV">Passive/Exempt</string>
         <string name="PLG_ARBEITSDIENST_INPUT_RESULT_TARGET">Target</string>
         <string name="PLG_ARBEITSDIENST_INPUT_RESULT_TOPAY">To pay</string>
+				<string name="PLG_ARBEITSDIENST_INPUT_ROLE_SELECTION">--- Select Role ---</string>
         <string name="PLG_ARBEITSDIENST_INPUT_SAVE">Save</string>
         <string name="PLG_ARBEITSDIENST_INPUT_USER">Member name</string>
         <string name="PLG_ARBEITSDIENST_INPUT_WORK">Work Duty Entry</string>
@@ -138,9 +140,9 @@
         <string name="PLG_ARBEITSDIENST_SYS_FIRST_ITEM">Please select</string>
 
         <string name="PLG_ARBEITSDIENST_TOTAL">Target hours</string>
-        <string name="PLG_ARBEITSDIENST_TOPAY">hours to be paid</string>
+        <string name="PLG_ARBEITSDIENST_TOPAY">Hours to be paid</string>
 
-        <string name="PLG_ARBEITSDIENST_WORKING">hours worked</string>
+        <string name="PLG_ARBEITSDIENST_WORKING">Hours worked</string>
         <string name="PLG_ARBEITSDIENST_WORKINGHOURS_MAN">Enter the required working hours for men</string>
         <string name="PLG_ARBEITSDIENST_WORKINGHOURS_WOMAN">Enter the required working hours for women</string>
         <string name="PLG_ARBEITSDIENST_WORKINGHOURS_AMOUNT">Enter the cost of one

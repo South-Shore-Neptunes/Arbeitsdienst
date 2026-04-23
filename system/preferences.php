@@ -33,7 +33,7 @@ try {
     // Initialize and check the parameters
     $showOption = admFuncVariableIsValid($_GET, 'show_option', 'string');
 
-    if (empty($showoption))
+    if (empty($showOption))
     {
         $showOption = 'configuration';
     }
@@ -46,7 +46,7 @@ try {
     $rols = allerollen_einlesen();
     $selectBoxEntriesAlleRollen = array();
 
-    $selectBoxEntriesAlleRollen[0] = '--- Rolle wählen ---';
+    $selectBoxEntriesAlleRollen[0] = $gL10n->get('PLG_ARBEITSDIENST_INPUT_ROLE_SELECTION');
 
     foreach ($rols as $key => $data) {
         $selectBoxEntriesAlleRollen[$key] = array(
@@ -59,7 +59,7 @@ try {
 
     // create html page object
     $page = PagePresenter::withHtmlIDAndHeadline('plg-arbeitsdienst-preferences', $headline);
-    //$page->addCssFile(ADMIDIO_URL . FOLDER_PLUGINS . '/arbeitsdienst/css/arbeitsdienst.css');
+    //$page->addCssFile(ADMIDIO_URL . FOLDER_PLUGINS . PLUGIN_FOLDER . '/css/arbeitsdienst.css');
 
     //#############################################################################
     //  Eingabe für Altergrenzen
@@ -68,7 +68,7 @@ try {
     $formConfigurations = new FormPresenter(
                                 'input_form_setting', 
                                 __DIR__ . '/../templates/arbeitsdienst.config.tpl',                                      
-                                SecurityUtils::encodeUrl(ADMIDIO_URL . FOLDER_PLUGINS . '/arbeitsdienst/system/preferences_function.php', array('form' => 'configuration')), 
+                                SecurityUtils::encodeUrl(ADMIDIO_URL . FOLDER_PLUGINS . PLUGIN_FOLDER . '/system/preferences_function.php', array('form' => 'configuration')), 
                                 $page, 
                                 array('class' => 'form-preferences'));
             
