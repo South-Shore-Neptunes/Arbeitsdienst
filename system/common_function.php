@@ -392,7 +392,7 @@ function list_members_workinfo($members, $datefilteractual)
             }
         }
         if (empty($passiv)) {
-            $membersworkinfo[$member]['PASSIV'] = 'nein';
+            $membersworkinfo[$member]['PASSIV'] = $gL10n->get('PLG_ARBEITSDIENST_PAD_NO');
             if (($membersworkinfo[$member]['ALTER'] >= $pPreferences->config['Alter']['AGEBegin']) && ($membersworkinfo[$member]['ALTER'] < $pPreferences->config['Alter']['AGEEnd'])) {
                 if ($memberdata['GENDER'] == 1) {
                     // MÃ¤nner
@@ -405,7 +405,7 @@ function list_members_workinfo($members, $datefilteractual)
                 $membersworkinfo[$member]['Sollstunden'] = 0;
             }
         } else {
-            $membersworkinfo[$member]['PASSIV'] = 'ja';
+            $membersworkinfo[$member]['PASSIV'] = $gL10n->get('PLG_ARBEITSDIENST_PAD_YES');
             $membersworkinfo[$member]['Sollstunden'] = 0;
         }
 

@@ -4,6 +4,8 @@
         <string name="PLG_ARBEITSDIENST_TEMPLATE_EINGABE">Input</string>
 
         <string name="PLG_ARBEITSDIENST_PAD_PAID">Paid</string>
+        <string name="PLG_ARBEITSDIENST_PAD_YES">Yes</string>
+        <string name="PLG_ARBEITSDIENST_PAD_NO">No</string>
         <string name="PLG_ARBEITSDIENST_Arbeitsdienst">Work Duty</string>
 
         <string name="PLG_ARBEITSDIENST_AGE_TO_WORK">Age limits</string>
