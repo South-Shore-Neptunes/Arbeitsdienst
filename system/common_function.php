@@ -362,13 +362,15 @@ function list_members($calculationyear, $fields, $rols = array(), $conditions = 
  */
 function list_members_workinfo($members, $datefilteractual)
 {
-    global $gDb, $gProfileFields;
+    global $gDb, $gProfileFields, $gL10n;
     $membersworkinfo = array();
 
     $pPreferences = new ConfigTablePAD();
     $pPreferences->read(); // Konfigurationsdaten auslesen
 
     foreach ($members as $member => $memberdata) {
+        $passiv = array();
+
         // Alter jedes Mitglieds berechnen und im Array speichern
         $dt1 = new DateTime($memberdata['BIRTHDAY']);
         $dt2 = new DateTime(date('d.m.Y', strtotime($datefilteractual . '-12-31')));

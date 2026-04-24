@@ -36,7 +36,7 @@
         <string name="PLG_ARBEITSDIENST_DATE_PAID_CHANGE_ALL_DESC">Select or deselect all entries for date assignment.</string>
 
         <string name="PLG_ARBEITSDIENST_EDIT_LIST">Edit entry</string>
-        <string name="PLG_ARBEITSDIENST_EXCEPTION">Passive role</string>
+        <string name="PLG_ARBEITSDIENST_EXCEPTION">Exempt Roles</string>
         <string name="PLG_ARBEITSDIENST_EXPORT">Export</string>
         <string name="PLG_ARBEITSDIENST_EXPORT_AND_FILTER">Export and filter</string>
         <string name="PLG_ARBEITSDIENST_EXPORT_CONTROL">Control</string>
@@ -113,7 +113,7 @@
         <string name="PLG_ARBEITSDIENST_INPUT_RESULT_DIFF">Diff</string>
         <string name="PLG_ARBEITSDIENST_INPUT_WORKINGHOURS_MAN">Working hours men: </string>
         <string name="PLG_ARBEITSDIENST_INPUT_RESULT_MISSING">Missing</string>
-        <string name="PLG_ARBEITSDIENST_INPUT_RESULT_PASSIV">Passive/Exempt</string>
+        <string name="PLG_ARBEITSDIENST_INPUT_RESULT_PASSIV">Exempt</string>
         <string name="PLG_ARBEITSDIENST_INPUT_RESULT_TARGET">Target</string>
         <string name="PLG_ARBEITSDIENST_INPUT_RESULT_TOPAY">To pay</string>
         <string name="PLG_ARBEITSDIENST_INPUT_ROLE_SELECTION">--- Select Role ---</string>

@@ -111,6 +111,12 @@ if (empty($getshowOption))
 {
     $getshowOption = 'main';
 }
+else
+{
+    // Guard against malformed URLs like ?show_option=main?show_option=main&...
+    // that otherwise prevent matching the expected page modes.
+    $getshowOption = strtok($getshowOption, '?');
+}
 
 if (empty($getoutputfile))
 {
@@ -171,7 +177,7 @@ $members = list_members($datefilteractual,
                             'LAST_NAME',
                             'BIRTHDAY',
                             'GENDER'), 
-                        array('Mitglied' => 0));
+                        0);
 
                      
 // Informationen aller Mitglieder zum Arbeitsdienst einslesen
@@ -613,13 +619,19 @@ if ($getshowOption == 'main')
     //#############################################################################
 
     // zu zahlenden Betrag errechnen
-    $workingtopay = 0;
-    if ($getinputuser != 0 && isset($membersworkinfo[$getinputuser]))
+    $overviewUserId = (int) $getinputuser;
+    if ($overviewUserId === 0 || !isset($membersworkinfo[$overviewUserId]))
     {
-        $workingtopay = $membersworkinfo[$getinputuser]['Fehlstunden'] * $pPreferences->config['Stunden']['Kosten'];
+        $overviewUserId = (int) $getUserId;
+    }
+
+    $workingtopay = 0;
+    if (isset($membersworkinfo[$overviewUserId]))
+    {
+        $workingtopay = ($membersworkinfo[$overviewUserId]['Fehlstunden'] ?? 0) * $pPreferences->config['Stunden']['Kosten'];
     }
     $workingtopay = number_format($workingtopay, 2);
-    $workingtopay = $workingtopay . ' ' . $gSettingsManager->getString('system_currency');
+    $workingtopay = $workingtopay;
 
     //Tabellenkopf
     $smarty->assign('header_result_age', 
@@ -635,25 +647,25 @@ if ($getshowOption == 'main')
     $smarty->assign('header_result_missing',                                                
                     $gL10n->get('PLG_ARBEITSDIENST_INPUT_RESULT_MISSING'));
     $smarty->assign('header_result_topay',                                                
-                    $gL10n->get('PLG_ARBEITSDIENST_INPUT_RESULT_TOPAY'));
+                    $gL10n->get('PLG_ARBEITSDIENST_INPUT_RESULT_TOPAY') . ' ' . $gSettingsManager->getString('system_currency'));
     $smarty->assign('header_result_no_data',
                      $gL10n->get('PLG_ARBEITSDIENST_NO_DATA'));
 
     //Ergebnisse ausgeben
-    if ($getinputuser != 0 && isset($membersworkinfo[$getinputuser]))
+    if (isset($membersworkinfo[$overviewUserId]))
     {
         
-        $smarty->assign('overview_result_alter', $membersworkinfo[$getinputuser]['ALTER']);
-        $smarty->assign('overview_result_passiv', $membersworkinfo[$getinputuser]['PASSIV']);
-        $smarty->assign('overview_result_soll', $membersworkinfo[$getinputuser]['Sollstunden']);
-        $smarty->assign('overview_result_ist', $membersworkinfo[$getinputuser]['Iststunden']);
-        $smarty->assign('overview_result_diff', $membersworkinfo[$getinputuser]['Differenzstunden']);
-        $smarty->assign('overview_result_fehl', $membersworkinfo[$getinputuser]['Fehlstunden']);
+        $smarty->assign('overview_result_alter', $membersworkinfo[$overviewUserId]['ALTER'] ?? 0);
+        $smarty->assign('overview_result_passiv', $membersworkinfo[$overviewUserId]['PASSIV'] ?? '');
+        $smarty->assign('overview_result_soll', $membersworkinfo[$overviewUserId]['Sollstunden'] ?? 0);
+        $smarty->assign('overview_result_ist', $membersworkinfo[$overviewUserId]['Iststunden'] ?? 0);
+        $smarty->assign('overview_result_diff', $membersworkinfo[$overviewUserId]['Differenzstunden'] ?? 0);
+        $smarty->assign('overview_result_fehl', $membersworkinfo[$overviewUserId]['Fehlstunden'] ?? 0);
         $smarty->assign('overview_result_topay', $workingtopay);
     }
     else
     {
-        $smarty->assign('overview_resul_alter', '');
+        $smarty->assign('overview_result_alter', '');
         $smarty->assign('overview_result_passiv', '');
         $smarty->assign('overview_result_soll', '');
         $smarty->assign('overview_result_ist', '');
