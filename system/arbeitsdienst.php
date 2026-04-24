@@ -124,7 +124,7 @@ $userdata['pad_hours'] = '';
 
 
 if ($getinputedit == true) {
-    $sqledit = 'SELECT *, DATE_FORMAT (pad_date, \'%d.%m.%Y\') as date FROM adm_user_arbeitsdienst
+    $sqledit = 'SELECT *, pad_date as date FROM adm_user_arbeitsdienst
                WHERE pad_id = ' . $getinputpadid;
     $listdata = array();
     $listdata = $gDb->query($sqledit);
@@ -212,6 +212,12 @@ if ($gCurrentUser->isAdministratorUsers())
 
     if ( $gCurrentUser->isAdministrator()) 
     {
+        $sumWorkingKosten = $sumworking['Kosten'] ?? 0;
+        if ($sumWorkingKosten === '' || $sumWorkingKosten === null)
+        {
+            $sumWorkingKosten = 0;
+        }
+
         $formStaticDisplay->addDescription('plg_arbeitsdienst_total',
                                         $gL10n->get('PLG_ARBEITSDIENST_TOTAL') . ': ' . $sumworking['Sollstunden']);
 
@@ -222,7 +228,7 @@ if ($gCurrentUser->isAdministratorUsers())
                                         $gL10n->get('PLG_ARBEITSDIENST_MISSING') . ': ' . $sumworking['Fehlstunden']);
 
         $formStaticDisplay->addDescription('plg_arbeitsdienst_topay',
-                                        $gL10n->get('PLG_ARBEITSDIENST_TOPAY') . ' ' . $gSettingsManager->getString('system_currency') . ': ' . $sumworking['Kosten']);
+                                        $gL10n->get('PLG_ARBEITSDIENST_TOPAY') . ' ' . $gSettingsManager->getString('system_currency') . ': ' . $sumWorkingKosten);
         
         $formStaticDisplay->addToHtmlPage();
     }
@@ -524,7 +530,7 @@ if ($getshowOption == 'main')
                                 pad_user_id as user,
                                 categorie.cat_name_intern as cat,
                                 project.cat_name_intern as proj,
-                                DATE_FORMAT (pad_date, \'%d.%m.%Y\') as date,
+                                pad_date as date,
                                 pad_name as discription,
                                 pad_hours as hours
                         FROM        adm_user_arbeitsdienst
@@ -563,6 +569,11 @@ if ($getshowOption == 'main')
                             . '">' . 
                             '<i class="bi bi-trash" data-toggle="tooltip" title="' . $gL10n->get('PLG_ARBEITSDIENST_DELETE_LIST') . '" /></i>
                             </a>';
+
+        if (!empty($item['date']))
+        {
+            $item['date'] = (new DateTime($item['date']))->format($gSettingsManager->getString('system_date'));
+        }
 
         $item["schalter"] = $lastcolumnedit . '&nbsp;' . $lastcolumndelete;
         
