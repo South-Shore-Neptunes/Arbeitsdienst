@@ -114,7 +114,7 @@
         <string name="PLG_ARBEITSDIENST_INPUT_RESULT_PASSIV">Passive/Exempt</string>
         <string name="PLG_ARBEITSDIENST_INPUT_RESULT_TARGET">Target</string>
         <string name="PLG_ARBEITSDIENST_INPUT_RESULT_TOPAY">To pay</string>
-				<string name="PLG_ARBEITSDIENST_INPUT_ROLE_SELECTION">--- Select Role ---</string>
+        <string name="PLG_ARBEITSDIENST_INPUT_ROLE_SELECTION">--- Select Role ---</string>
         <string name="PLG_ARBEITSDIENST_INPUT_SAVE">Save</string>
         <string name="PLG_ARBEITSDIENST_INPUT_USER">Member name</string>
         <string name="PLG_ARBEITSDIENST_INPUT_WORK">Work Duty Entry</string>
