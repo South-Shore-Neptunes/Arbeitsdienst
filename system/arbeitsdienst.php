@@ -654,13 +654,14 @@ if ($getshowOption == 'main')
     //Ergebnisse ausgeben
     if (isset($membersworkinfo[$overviewUserId]))
     {
+        $overviewData = $membersworkinfo[$overviewUserId] ?? array();
         
-        $smarty->assign('overview_result_alter', $membersworkinfo[$overviewUserId]['ALTER'] ?? 0);
-        $smarty->assign('overview_result_passiv', $membersworkinfo[$overviewUserId]['PASSIV'] ?? '');
-        $smarty->assign('overview_result_soll', $membersworkinfo[$overviewUserId]['Sollstunden'] ?? 0);
-        $smarty->assign('overview_result_ist', $membersworkinfo[$overviewUserId]['Iststunden'] ?? 0);
-        $smarty->assign('overview_result_diff', $membersworkinfo[$overviewUserId]['Differenzstunden'] ?? 0);
-        $smarty->assign('overview_result_fehl', $membersworkinfo[$overviewUserId]['Fehlstunden'] ?? 0);
+        $smarty->assign('overview_result_alter', $overviewData['ALTER'] ?? 0);
+        $smarty->assign('overview_result_passiv', $overviewData['PASSIV'] ?? '');
+        $smarty->assign('overview_result_soll', $overviewData['Sollstunden'] ?? 0);
+        $smarty->assign('overview_result_ist', $overviewData['Iststunden'] ?? 0);
+        $smarty->assign('overview_result_diff', $overviewData['Differenzstunden'] ?? 0);
+        $smarty->assign('overview_result_fehl', $overviewData['Fehlstunden'] ?? 0);
         $smarty->assign('overview_result_topay', $workingtopay);
     }
     else
@@ -677,8 +678,6 @@ if ($getshowOption == 'main')
 
     $htmlTable = $smarty->fetch(__DIR__ . '/../templates/arbeitsdienst_input_overview.tpl');
     $page->addHtml($htmlTable);
-
-
 
     //#############################################################################
     //  Eingabe der Kategorie (nur Admin)
