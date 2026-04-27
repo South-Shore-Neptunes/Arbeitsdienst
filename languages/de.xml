@@ -4,6 +4,8 @@
         <string name="PLG_ARBEITSDIENST_TEMPLATE_EINGABE">Eingabe</string>
 
         <string name="PLG_ARBEITSDIENST_PAD_PAID">Bezahlt</string>
+        <string name="PLG_ARBEITSDIENST_PAD_YES">na</string>
+        <string name="PLG_ARBEITSDIENST_PAD_NO">nein</string>
         <string name="PLG_ARBEITSDIENST_Arbeitsdienst">Arbeitsdienst</string>
 
         <string name="PLG_ARBEITSDIENST_AGE_TO_WORK">Altersgrenzen</string>
@@ -32,6 +34,7 @@
         <string name="PLG_ARBEITSDIENST_DATE_PAID">Bezahlt-Datum</string>
         <string name="PLG_ARBEITSDIENST_DATE_PAID_DESC">Das Bezahlt-Datum wird bei einem Benutzer als
                 Kennzeichnung für eine geleistete Beitragszahlung eingetragen.</string>
+        <string name="PLG_ARBEITSDIENST_DATE_PAID_CHANGE_ALL_DESC">Alle Einträge für die Datumszuweisung auswählen oder abwählen.</string>
 
         <string name="PLG_ARBEITSDIENST_EDIT_LIST">Eintrag bearbeiten</string>
         <string name="PLG_ARBEITSDIENST_EXCEPTION">Passive Rolle</string>
@@ -67,6 +70,8 @@
         <string name="PLG_ARBEITSDIENST_EXPORT_KONTROL_PRINT_CSVPAY">CSV(Zahler)</string>
         <string name="PLG_ARBEITSDIENST_EXPORT_KONTROL_SEPA_RCUR">RCUR</string>
         <string name="PLG_ARBEITSDIENST_EXPORT_KONTROL_SEPA_FRST">FRST</string>
+        <string name="PLG_ARBEITSDIENST_EXPORT_FILENAME_ALL_PREFIX">Arbeitsdienst_Alle</string>
+        <string name="PLG_ARBEITSDIENST_EXPORT_FILENAME_PAY_ONLY_PREFIX">Arbeitsdienst_Zahler</string>
 
         <string name="PLG_ARBEITSDIENST_FILENAME">Dateiname</string>
         <string name="PLG_ARBEITSDIENST_FILTER">Filter</string>
@@ -113,12 +118,13 @@
         <string name="PLG_ARBEITSDIENST_INPUT_RESULT_PASSIV">Passiv/Befreit</string>
         <string name="PLG_ARBEITSDIENST_INPUT_RESULT_TARGET">Soll</string>
         <string name="PLG_ARBEITSDIENST_INPUT_RESULT_TOPAY">zu zahlen</string>
+        <string name="PLG_ARBEITSDIENST_INPUT_ROLE_SELECTION">--- Rolle wählen ---</string>
         <string name="PLG_ARBEITSDIENST_INPUT_SAVE">Speichern</string>
         <string name="PLG_ARBEITSDIENST_INPUT_USER">Mitgliedsname</string>
         <string name="PLG_ARBEITSDIENST_INPUT_WORK">Eingabe Arbeitsdienst</string>
         <string name="PLG_ARBEITSDIENST_INPUT_WORKINGDATE">Datum</string>
         <string name="PLG_ARBEITSDIENST_INPUT_WORKINGHOURS_WOMAN">Arbeitsstunden Frauen: </string>
-        <string name="PLG_ARBEITSDIENST_INPUT_WORKINGHOURS_AMOUNT">Betrag in €: </string>
+        <string name="PLG_ARBEITSDIENST_INPUT_WORKINGHOURS_AMOUNT">Betrag in</string>
         <string name="PLG_ARBEITSDIENST_INPUT_YEAR">Abrechnungsjahr</string>
 
         <string name="PLG_ARBEITSDIENST_MANAGEMENT">Arbeitsdienst</string>
@@ -126,6 +132,7 @@
         <string name="PLG_ARBEITSDIENST_NO_DATA">keine Daten vorhanden</string>
         <string name="PLG_ARBEITSDIENST_OVERVIEW">Zahlungsübersicht</string>
         <string name="PLG_ARBEITSDIENST_OVERVIEW_PAYMENT">aktuelle Zahlungen</string>
+        <string name="PLG_ARBEITSDIENST_OVERVIEW_PAYMENT_NO_DATA">es sind keine Daten vorhanden</string>
         <string name="PLG_ARBEITSDIENST_OVERVIEW_HISTORY">Zahlungshistorie</string>
 
         <string name="PLG_Arbeitsdienst_PLUGIN_INFORMATION">Plugininformationen</string>
