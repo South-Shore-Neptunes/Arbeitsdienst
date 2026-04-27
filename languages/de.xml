@@ -4,7 +4,7 @@
         <string name="PLG_ARBEITSDIENST_TEMPLATE_EINGABE">Eingabe</string>
 
         <string name="PLG_ARBEITSDIENST_PAD_PAID">Bezahlt</string>
-        <string name="PLG_ARBEITSDIENST_PAD_YES">na</string>
+        <string name="PLG_ARBEITSDIENST_PAD_YES">ja</string>
         <string name="PLG_ARBEITSDIENST_PAD_NO">nein</string>
         <string name="PLG_ARBEITSDIENST_Arbeitsdienst">Arbeitsdienst</string>
 
